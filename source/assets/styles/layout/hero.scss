@@ -1,0 +1,36 @@
+.hero {
+  height: 160px;
+  position: relative;
+  background: black;
+
+  &::before,
+  &::after {
+    content: '';
+    display: block;
+    height: 18px;
+    width: 100%;
+    position: absolute;
+    background: transparentize(white, 0.4);
+    z-index: 1;
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    bottom: 0;
+  }
+
+  &-mask {
+    @include position(absolute, 0);
+    @include radial-gradient(circle, transparent 40%, black 90%);
+    width: 960px;
+    margin: auto;
+  }
+
+  img {
+    display: block;
+    margin: auto;
+  }
+}
