@@ -1,0 +1,29 @@
+.main-content-container {
+  padding: 30px;
+}
+
+.sidebar {
+  margin-top: 2rem;
+}
+
+@media screen and (max-width: $desktop-breakpoint - 1) {
+  .sidebar {
+    li {
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (min-width: $desktop-breakpoint) {
+  .main-content-wrapper {
+    @include display(flex);
+  }
+
+  .sidebar {
+    margin-left: 2rem;
+
+    li {
+      margin-bottom: 2rem;
+    }
+  }
+}

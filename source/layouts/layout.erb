@@ -16,8 +16,11 @@
   <body class="<%= page_classes %>">
     <%= partial 'page_header' %>
     <%= partial 'hero' %>
-    <%= yield %>
-  </body>
 
-  <%= javascript_include_tag 'main.bundle' %>
+    <div class="container main-content-container">
+      <%= yield %>
+    </div>
+
+    <%= javascript_include_tag 'main.bundle' %>
+  </body>
 </html>
