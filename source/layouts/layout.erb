@@ -17,8 +17,14 @@
     <%= partial 'page_header' %>
     <%= partial 'hero' %>
 
-    <div class="container main-content-container">
-      <%= yield %>
+    <div class="container">
+      <% if content_for?(:above_content) %>
+        <%= yield_content :above_content %>
+      <% end %>
+
+      <div class="main-content-container">
+        <%= yield %>
+      </div>
     </div>
 
     <%= javascript_include_tag 'main.bundle' %>
