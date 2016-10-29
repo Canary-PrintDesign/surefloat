@@ -58,6 +58,10 @@ var siteConfig = {
     ],
   },
 
+  sassLoader: {
+    includePaths: [require('bourbon').includePaths]
+  },
+
   node: {
     console: true
   },
