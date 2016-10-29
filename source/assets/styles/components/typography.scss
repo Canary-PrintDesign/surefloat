@@ -1,0 +1,20 @@
+html {
+  font-size: 16px;
+}
+
+body {
+  color: $color-body;
+  font-family: $font-family-body;
+}
+
+h2 {
+  font-size: 23px;
+  font-weight: normal;
+  color: $gray;
+}
+
+ul {
+  list-style-type: square;
+  font-size: 13px;
+  line-height: 1.5em;
+}

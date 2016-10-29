@@ -1,7 +1,12 @@
+$mine-shaft:            hsl(116,   0,  20);
 $oslo-gray:             hsl(213,   5,  54);
 
+$black:                 $mine-shaft;
 $gray:                  $oslo-gray;
 $white:                 white;
+
+$color-body:            $black;
+$font-family-body:      "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 
 $navbar-bg:             $gray;
 $navbar-color:          $white;
