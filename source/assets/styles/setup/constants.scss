@@ -1,0 +1,12 @@
+$oslo-gray:             hsl(213,   5,  54);
+
+$gray:                  $oslo-gray;
+$white:                 white;
+
+$navbar-bg:             $gray;
+$navbar-color:          $white;
+$navbar-muted:          transparentize($navbar-color, 0.4);
+$navbar-height:         24px;
+$navbar-height-outter:  50px;
+
+$page-width:            960px;

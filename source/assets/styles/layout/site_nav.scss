@@ -1,0 +1,45 @@
+.site-nav {
+  @include display(flex);
+  box-sizing: border-box;
+  height: $navbar-height-outter;
+  margin: 15px 0;
+  background: url(../images/site-nav-bg.jpg) center $navbar-bg;
+  font-size: 0.8em;
+  text-transform: uppercase;
+
+  .container {
+    @include flex-basis($page-width);
+  }
+
+  ul {
+    @include display(flex);
+    @include flex-direction(row);
+    @include align-items(stretch);
+    height: $navbar-height;
+    margin: 0;
+  }
+
+  li {
+    @include flex-basis(145px);
+    border-right: 1px solid $navbar-muted;
+  }
+
+  a {
+    display: block;
+    height: 100%;
+    position: relative;
+    color: $navbar-color;
+    text-decoration: none;
+    text-align: right;
+    line-height: 1;
+
+    sub {
+      display: inline-block;
+      width: 100%;
+      bottom: -0.5em;
+      color: $navbar-muted;
+      font-size: 0.8em;
+      vertical-align: top;
+    }
+  }
+}
