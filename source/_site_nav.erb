@@ -1,9 +1,11 @@
 <nav class="site-nav">
+  <button class="moblie-nav-trigger only-mobile" data-toggle-class-target=".site-nav">Open Menu</button>
+
   <div class="container">
-    <ul class="list-inline">
-      <li><% link_to('/'){ %><sub></sub>Home<% } %></li>
-      <li><% link_to('/products-services'){ %><sub>Products</sub>& Services<% } %></li>
-      <li><% link_to('/client-testimonials'){ %><sub>Client</sub>Testimonials<% } %></li>
+    <ul class="site-nav-list">
+      <li><% link_to('/'){ %><span></span>Home<% } %></li>
+      <li><% link_to('/products-services'){ %><span>Products</span> & Services<% } %></li>
+      <li><% link_to('/client-testimonials'){ %><span>Client</span> Testimonials<% } %></li>
     </ul>
   </div>
 </nav>
