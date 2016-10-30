@@ -1,0 +1,15 @@
+.alignleft {
+  clear: left;
+  float: left;
+  margin: 0 3em 1.5em 0;
+}
+
+.alignright {
+  clear: right;
+  float: right;
+  margin: 0 0 1em 3em;
+}
+
+.clearfix {
+  @include clearfix;
+}

@@ -5,7 +5,9 @@
 @import "bourbon";
 @import "normalize";
 
+@import "components/utilities";
 @import "components/typography";
+@import "components/blockquote";
 @import "components/lists";
 
 @import "layout/layout";
