@@ -2,6 +2,7 @@
   min-height: 160px;
   position: relative;
   background: black;
+  overflow: hidden;
 
   &::before,
   &::after {
@@ -37,6 +38,22 @@
     max-width: $page-width;
     height: 100%;
     z-index: 1;
+
+    &::before,
+    &::after {
+      @include position(absolute, 0);
+      content: '';
+      display: block;
+      background: black;
+    }
+
+    &::before {
+      @include transform(translateX(-100%));
+    }
+
+    &::after {
+      @include transform(translateX(100%));
+    }
   }
 
   img {
