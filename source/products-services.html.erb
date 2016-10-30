@@ -3,6 +3,10 @@ title: Products & Services
 hero: hero/marina.jpg
 ---
 
+<% content_for :above_content do %>
+  <%= partial 'services_breadcrumbs', locals: { active: '/products-services' } %>
+<% end %>
+
 <h2>PRODUCTS & SERVICES</h2>
 
 <div class="main-content-wrapper">

@@ -21,11 +21,15 @@ $color-link:            $color-primary;
 $font-family-body:      "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 $font-family-serif:     Georgia, "Times New Roman", Times, serif;
 
-$navbar-bg:             $gray;
-$navbar-color:          $white;
-$navbar-muted:          transparentize($navbar-color, 0.4);
+
+$navbar-color:          $gray-dark;
 $navbar-height:         24px;
 $navbar-height-outter:  50px;
+$navbar-padding:        13px;
+
+$site-nav-bg:             $gray;
+$site-nav-color:          $white;
+$site-nav-muted:          transparentize($site-nav-color, 0.4);
 
 $footer-color:          $gray-dark;
 $footer-muted:          $gray-light;

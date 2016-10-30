@@ -1,25 +1,23 @@
-$margin-site-nav: 13px;
-
 .site-nav {
   box-sizing: border-box;
-  margin: 15px 0;
-  background: url(../images/site-nav-bg.jpg) center $navbar-bg;
+  background: url(../images/site-nav-bg.jpg) center $site-nav-bg;
   font-size: 0.8em;
 
-  ul {
-    padding-left: 0;
-    margin: 0;
-    list-style: none;
-  }
-
   a,
-  button {
+  .moblie-nav-trigger {
     display: block;
     height: 100%;
     position: relative;
-    color: $navbar-color;
+    color: $site-nav-color;
+    border: none;
+    background: transparent;
     text-decoration: none;
     text-transform: uppercase;
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 0;
   }
 
   @media screen and (max-width: $desktop-breakpoint - 1) {
@@ -64,55 +62,8 @@ $margin-site-nav: 13px;
     }
 
     &-list {
-      @include list-inline;
-      @include display(flex);
-      @include flex-direction(row);
-      @include align-items(stretch);
-      height: $navbar-height;
-
-      > li {
-        @include flex-basis(145px);
-
-        > a {
-          text-align: right;
-
-          &::after {
-            display: block;
-            content: '';
-            height: $navbar-height;
-            position: absolute;
-            top: $margin-site-nav;
-            right: -0.5rem;
-            border-right: 1px solid $navbar-muted;
-          }
-        }
-      }
-    }
-
-    a {
-      @include padding($margin-site-nav null);
-      position: relative;
-      line-height: 1;
-
-      > span {
-        display: inline-block;
-        width: 100%;
-        bottom: -0.5em;
-        color: $navbar-muted;
-        font-size: 0.8em;
-        vertical-align: top;
-      }
-    }
-
-    .has-dropdown {
-      position: relative;
-
-      &::after {
-        @include caret(tint($color-primary, 50%));
-        position: absolute;
-        right: -1rem;
-        top: $margin-site-nav + $navbar-height / 2;
-      }
+      @include as-navbar;
+      margin: 0;
     }
 
     li:not(:hover) {
@@ -121,16 +72,31 @@ $margin-site-nav: 13px;
       }
     }
 
+    a  > span {
+      color: $site-nav-muted;
+    }
+
+    > li > a::after {
+      border-right-color:$site-nav-muted;
+    }
+
     // make the dropdown visible above the hero
     .container {
       margin: 0 auto;
       z-index: 100;
     }
 
+    .has-dropdown {
+      &::after {
+        @include caret(tint($color-primary, 50%));
+      }
+    }
+
     .dropdown {
       position: relative;
       top: 0;
       left: 30%;
+      padding-left: 0;
       background: url("../images/dropdown-bg.png") transparent 0 repeat;
       z-index: 100;
 
