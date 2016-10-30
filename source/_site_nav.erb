@@ -4,7 +4,12 @@
   <div class="container">
     <ul class="site-nav-list">
       <li><% link_to('/'){ %><span></span>Home<% } %></li>
-      <li><% link_to('/products-services'){ %><span>Products</span> & Services<% } %></li>
+      <li class="has-dropdown"><% link_to('/products-services'){ %><span>Products</span> & Services<% } %>
+        <ul class="dropdown">
+          <li><% link_to('/products-services/commercial-marinas'){ %><span>Commercial</span> Marinas<% } %></li>
+          <li><% link_to('/products-services/residential-cottage-docks'){ %><span>Residential</span> Cottage Docks<% } %></li>
+        </ul>
+      </li>
       <li><% link_to('/client-testimonials'){ %><span>Client</span> Testimonials<% } %></li>
     </ul>
   </div>

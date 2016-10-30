@@ -1,3 +1,5 @@
+$margin-site-nav: 13px;
+
 .site-nav {
   box-sizing: border-box;
   margin: 15px 0;
@@ -61,22 +63,35 @@
       @include flex-basis($page-width);
     }
 
-    ul {
+    &-list {
       @include list-inline;
       @include display(flex);
       @include flex-direction(row);
       @include align-items(stretch);
       height: $navbar-height;
+
+      > li {
+        @include flex-basis(145px);
+
+        > a {
+          text-align: right;
+
+          &::after {
+            display: block;
+            content: '';
+            height: $navbar-height;
+            position: absolute;
+            top: $margin-site-nav;
+            right: -0.5rem;
+            border-right: 1px solid $navbar-muted;
+          }
+        }
+      }
     }
 
-    li {
-      @include flex-basis(145px);
-      border-right: 1px solid $navbar-muted;
-    }
-
-    a,
-    button {
-      text-align: right;
+    a {
+      @include padding($margin-site-nav null);
+      position: relative;
       line-height: 1;
 
       > span {
@@ -89,5 +104,54 @@
       }
     }
 
+    .has-dropdown {
+      position: relative;
+
+      &::after {
+        @include caret(tint($color-primary, 50%));
+        position: absolute;
+        right: -1rem;
+        top: $margin-site-nav + $navbar-height / 2;
+      }
+    }
+
+    li:not(:hover) {
+      .dropdown {
+        display: none;
+      }
+    }
+
+    // make the dropdown visible above the hero
+    .container {
+      margin: 0 auto;
+      z-index: 100;
+    }
+
+    .dropdown {
+      position: relative;
+      top: 0;
+      left: 30%;
+      background: url("../images/dropdown-bg.png") transparent 0 repeat;
+      z-index: 100;
+
+      li,
+      a {
+        box-sizing: border-box;
+        width: 100%;
+      }
+
+      li {
+        padding: 0;
+        border-top: 1px solid transparentize($white, 0.5);
+      }
+
+      a {
+        padding: 0.5rem;
+
+        &:hover {
+          background: #394045;
+        }
+      }
+    }
   }
 }
