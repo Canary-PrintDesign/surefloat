@@ -2,6 +2,11 @@
 title: About Surefloat
 hero: hero/shipyard.jpg
 ---
+
+<% content_for :above_content do %>
+  <%= partial 'about_breadcrumbs', locals: { active: '/about-us' } %>
+<% end %>
+
 <h2>ABOUT SUREFLOAT</h2>
 
 
@@ -48,5 +53,3 @@ hero: hero/shipyard.jpg
       </li>
     </ul>
   </p>
-
-

@@ -3,6 +3,10 @@ title: Our History
 hero: hero/crane.jpg
 ---
 
+<% content_for :above_content do %>
+  <%= partial 'about_breadcrumbs', locals: { active: '/about-us/our-history' } %>
+<% end %>
+
 <h2>OUR HISTORY</h2>
 
   <figure class="alignright">
@@ -15,4 +19,3 @@ hero: hero/crane.jpg
   <p>
     Given Surespan’s expertise and reputation, it is no surprise that Surespan Construction Ltd has designed, supplied and erected more than 5000 permanent and portable bridges in the last 30 years. Some of Surespan’s past projects include the Vancouver Convention Centre, VANOC’s Olympic Nordic Center, and Port Mann Bridge.
   </p>
-
