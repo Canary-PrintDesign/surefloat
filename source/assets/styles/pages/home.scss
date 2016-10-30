@@ -1,8 +1,10 @@
 .tagline {
-  background: url(../images/home/tagline.png) $white center no-repeat;
-  height: 40px;
 
   span {
-    display: none;
+    color: #647fb7;
+    font-size: 11px;
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 40px;
   }
 }
