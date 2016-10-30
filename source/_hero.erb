@@ -1,4 +1,4 @@
 <div class="hero">
   <div class="hero-mask"></div>
-  <%= image_tag 'hero/sunset.jpg' %>
+  <%= image_tag current_page.data.hero || 'hero/sunset.jpg' %>
 </div>
