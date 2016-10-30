@@ -1,0 +1,22 @@
+<% wrap_layout :layout do %>
+  <div class="main-content-wrapper">
+    <div class="main-content">
+      <%= yield %>
+    </div>
+
+    <div class="sidebar">
+      <ul class="list-unstyled">
+        <li>
+          <a href="/products-services/commercial-marinas">
+            <%= image_tag 'home/commercial.jpg', title: 'Commercial Marinas' %>
+          </a>
+        </li>
+        <li>
+          <a href="/products-services/residential-cottage-docks">
+            <%= image_tag 'home/residential.jpg', title: 'Residential Cottage Docks' %>
+          </a>
+        </li>
+      </ul>
+    <div>
+  </div>
+<% end %>
