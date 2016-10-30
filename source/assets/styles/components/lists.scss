@@ -1,4 +1,4 @@
-.list-inline {
+@mixin list-inline {
   padding-left: 0;
   margin-left: -5px;
   list-style: none;
@@ -7,6 +7,10 @@
     @include padding(null 7px);
     display: inline-block;
   }
+}
+
+.list-unstyled {
+  @include list-inline;
 }
 
 .list-unstyled {

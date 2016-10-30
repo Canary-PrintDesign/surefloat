@@ -13,3 +13,15 @@
 .clearfix {
   @include clearfix;
 }
+
+@media screen and (max-width: $desktop-breakpoint - 1) {
+  .only-desktop {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: $desktop-breakpoint) {
+  .only-mobile {
+    display: none !important;
+  }
+}

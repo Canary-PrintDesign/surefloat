@@ -1,45 +1,93 @@
 .site-nav {
-  @include display(flex);
   box-sizing: border-box;
-  height: $navbar-height-outter;
   margin: 15px 0;
   background: url(../images/site-nav-bg.jpg) center $navbar-bg;
   font-size: 0.8em;
-  text-transform: uppercase;
-
-  .container {
-    @include flex-basis($page-width);
-  }
 
   ul {
-    @include display(flex);
-    @include flex-direction(row);
-    @include align-items(stretch);
-    height: $navbar-height;
+    padding-left: 0;
     margin: 0;
+    list-style: none;
   }
 
-  li {
-    @include flex-basis(145px);
-    border-right: 1px solid $navbar-muted;
-  }
-
-  a {
+  a,
+  button {
     display: block;
     height: 100%;
     position: relative;
     color: $navbar-color;
     text-decoration: none;
-    text-align: right;
-    line-height: 1;
+    text-transform: uppercase;
+  }
 
-    sub {
-      display: inline-block;
-      width: 100%;
-      bottom: -0.5em;
-      color: $navbar-muted;
-      font-size: 0.8em;
-      vertical-align: top;
+  @media screen and (max-width: $desktop-breakpoint - 1) {
+    &:not(.active) {
+      height: $navbar-height-outter;
+
+      ul {
+        display: none;
+      }
     }
+
+    &.active {
+      .moblie-nav-trigger {
+        display: none;
+      }
+    }
+
+    .moblie-nav-trigger {
+      word-wrap: none;
+    }
+
+    li,
+    .moblie-nav-trigger {
+      margin-left: 1rem;
+    }
+
+    ul {
+      @include padding(0.5rem null);
+    }
+
+    li a {
+      padding: 0.5em;
+    }
+  }
+
+  @media screen and (min-width: $desktop-breakpoint) {
+    @include display(flex);
+    height: $navbar-height-outter;
+
+    .container {
+      @include flex-basis($page-width);
+    }
+
+    ul {
+      @include list-inline;
+      @include display(flex);
+      @include flex-direction(row);
+      @include align-items(stretch);
+      height: $navbar-height;
+    }
+
+    li {
+      @include flex-basis(145px);
+      border-right: 1px solid $navbar-muted;
+    }
+
+    a,
+    button {
+      text-align: right;
+      line-height: 1;
+
+      > span {
+        display: inline-block;
+        width: 100%;
+        bottom: -0.5em;
+        color: $navbar-muted;
+        font-size: 0.8em;
+        vertical-align: top;
+      }
+    }
+
   }
 }

@@ -1,3 +1,5 @@
+import 'toggle_class';
+
 if (__DEVELOPMENT__) {
   console.log("Running in development mode!");
 }
