@@ -1,15 +1,22 @@
 $mine-shaft:            hsl(116,   0,  20);
+$dove-gray:             hsl( 93,   0,  40);
 $oslo-gray:             hsl(213,   5,  54);
+$dusty-gray:            hsl( 93,   0,  60);
+$silver:                hsl( 93,   0,  80);
 $ship-cove:             hsl(221,  36,  55);
 
 $black:                 $mine-shaft;
+$gray-dark:             $dove-gray;
 $gray:                  $oslo-gray;
+$gray-light:            $dusty-gray;
+$gray-lighter:          $silver;
 $white:                 white;
 
 $color-primary:         $ship-cove;
 
 $color-body:            $black;
 $color-body-bg:         $white;
+$color-border:          $gray-lighter;
 $color-link:            $color-primary;
 $font-family-body:      "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 $font-family-serif:     Georgia, "Times New Roman", Times, serif;
@@ -19,6 +26,9 @@ $navbar-color:          $white;
 $navbar-muted:          transparentize($navbar-color, 0.4);
 $navbar-height:         24px;
 $navbar-height-outter:  50px;
+
+$footer-color:          $gray-dark;
+$footer-muted:          $gray-light;
 
 $page-width:            960px;
 
