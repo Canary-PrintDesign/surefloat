@@ -5,6 +5,7 @@ html {
 body {
   color: $color-body;
   font-family: $font-family-body;
+  font-size: 13px;
 }
 
 h2 {
@@ -15,6 +16,5 @@ h2 {
 
 ul {
   list-style-type: square;
-  font-size: 13px;
   line-height: 1.5em;
 }

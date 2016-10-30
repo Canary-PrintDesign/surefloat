@@ -1,6 +1,5 @@
 blockquote {
   margin: 0;
-  font-size: 13px;
 
   > p {
     padding: 1.5rem 0;
@@ -25,10 +24,6 @@ blockquote {
 
     img {
       box-shadow: 0 3px 6px transparentize($black, 0.5);
-    }
-
-    figcaption {
-      font-size: 13px;
     }
   }
 }
