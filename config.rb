@@ -15,3 +15,9 @@ set :js_dir,     'assets/scripts'
 set :images_dir, 'assets/images'
 
 activate :directory_indexes
+
+helpers do
+  def breadcrumb_link(target, active, &block)
+    link_to(target, class: (target == active ? 'active' : ''), &block)
+  end
+end

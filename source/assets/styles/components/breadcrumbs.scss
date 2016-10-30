@@ -7,5 +7,9 @@
     > span {
       font-weight: normal;
     }
+
+    &.active {
+      color: shade($color-primary, 50%);
+    }
   }
 }

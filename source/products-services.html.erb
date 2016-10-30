@@ -4,11 +4,7 @@ hero: hero/marina.jpg
 ---
 
 <% content_for :above_content do %>
-<ul class="navbar breadcrumbs">
-  <li class="has-dropdown"><% link_to('/products-services'){ %><span>Products</span> & Services<% } %>
-  <li class="has-dropdown"><% link_to('/products-services/commercial-marinas'){ %><span>Commercial</span> Marinas<% } %></li>
-  <li class="has-dropdown"><% link_to('/products-services/residential-cottage-docks'){ %><span>Residential</span> Cottage Docks<% } %></li>
-</ul>
+  <%= partial 'services_breadcrumbs', locals: { active: '/products-services' } %>
 <% end %>
 
 <h2>PRODUCTS & SERVICES</h2>
