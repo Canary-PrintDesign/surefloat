@@ -1,7 +1,8 @@
 .tagline {
+  text-align: center;
 
   span {
-    color: #647fb7;
+    color: $color-primary;
     font-size: 11px;
     font-weight: 900;
     text-transform: uppercase;

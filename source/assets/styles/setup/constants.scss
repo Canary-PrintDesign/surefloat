@@ -1,11 +1,15 @@
 $mine-shaft:            hsl(116,   0,  20);
 $oslo-gray:             hsl(213,   5,  54);
+$ship-cove:             hsl(221,  36,  55);
 
 $black:                 $mine-shaft;
 $gray:                  $oslo-gray;
 $white:                 white;
 
+$color-primary:         $ship-cove;
+
 $color-body:            $black;
+$color-link:            $color-primary;
 $font-family-body:      "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 $font-family-serif:     Georgia, "Times New Roman", Times, serif;
 
