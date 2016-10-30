@@ -1,0 +1,66 @@
+@mixin as-navbar {
+  @include list-inline;
+  @include display(flex);
+  @include flex-direction(row);
+  @include align-items(stretch);
+  height: $navbar-height;
+
+  > li {
+    @include flex-basis(145px);
+
+    > a {
+      text-align: right;
+
+      &::after {
+        display: block;
+        content: '';
+        height: $navbar-height;
+        position: absolute;
+        top: $navbar-padding;
+        right: -0.5rem;
+        border-right: 1px solid $color-border;
+      }
+    }
+  }
+
+  a {
+    @include padding($navbar-padding null);
+    position: relative;
+    line-height: 1;
+
+    > span {
+      display: inline-block;
+      width: 100%;
+      bottom: -0.5em;
+      font-size: 0.8em;
+      vertical-align: top;
+    }
+  }
+
+  .has-dropdown {
+    position: relative;
+
+    &::after {
+      @include caret(tint($color-primary, 25%));
+      position: absolute;
+      right: -1rem;
+      top: $navbar-padding + $navbar-height / 2;
+    }
+  }
+}
+
+.navbar {
+  padding-left: 0;
+  margin: 0;
+  list-style: none;
+
+  a {
+    display: block;
+    height: 100%;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $navbar-color;
+  }
+
+  @include as-navbar;
+}

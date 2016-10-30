@@ -3,6 +3,14 @@ title: Products & Services
 hero: hero/marina.jpg
 ---
 
+<% content_for :above_content do %>
+<ul class="navbar breadcrumbs">
+  <li class="has-dropdown"><% link_to('/products-services'){ %><span>Products</span> & Services<% } %>
+  <li class="has-dropdown"><% link_to('/products-services/commercial-marinas'){ %><span>Commercial</span> Marinas<% } %></li>
+  <li class="has-dropdown"><% link_to('/products-services/residential-cottage-docks'){ %><span>Residential</span> Cottage Docks<% } %></li>
+</ul>
+<% end %>
+
 <h2>PRODUCTS & SERVICES</h2>
 
 <div class="main-content-wrapper">
