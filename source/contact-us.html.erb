@@ -1,0 +1,31 @@
+---
+hero: hero/sunset.jpg
+---
+
+<h2>CONTACT US</h2>
+
+<form enctype="multipart/form-data" action="/contact-us#usermessagea" method="post" class="cform contact " id="cformsform">
+  <ol class="cf-ol">
+    <li><label for="cf_field_1"><span>Your Name</span></label><input type="text" name="cf_field_1" id="cf_field_1" class="single fldrequired" value="Your Name" onfocus="clearField(this)" onblur="setField(this)"><span class="reqtxt">(required)</span></li>
+    <li><label for="cf_field_2"><span>Email</span></label><input type="text" name="cf_field_2" id="cf_field_2" class="single fldemail fldrequired" value=""><span class="emailreqtxt">(valid email required)</span></li>
+    <li><label for="cf_field_3"><span>Subject</span></label><input type="text" name="cf_field_3" id="cf_field_3" class="single" value=""></li>
+    <li><label for="cf_field_4"><span>Message</span></label><textarea cols="30" rows="8" name="cf_field_4" id="cf_field_4" class="area"></textarea></li>
+    <li><label for="cf_field_5"><span>Email me a copy</span></label><input type="checkbox" name="cf_field_5" id="cf_field_5" class="cf-box-b"></li>
+  </ol>
+  <p class="cf-sb"><input type="submit" name="sendbutton" id="sendbutton" class="sendbutton" value="Submit" onclick="return cforms_validate('', false)"></p>
+</form>
+
+<address>
+  <a href="http://maps.google.ca/maps?q=3721+Drinkwater+Rd%0ADuncan+BC+V9L+6P2" target="_blank">
+    <%= image_tag 'contact_us/gmap.png' %>
+  </a><br>
+  <span style="color: #ffffff;">.</span><br>
+  3721 Drinkwater Rd<br>
+  Duncan BC V9L 6P2<br>
+  <span style="color: #ffffff;">.</span><br>
+  Toll Free: 800.748.8177<br>
+  Phone: 250.748.8888<br>
+  Fax: 250.746.8011<br>
+  <span style="color: #ffffff;">.</span><br>
+  <a href="mailto:surefloat@surespanstructures.com">surefloat@surespanstructures.com</a>
+</address>

@@ -1,0 +1,12 @@
+.contact-us {
+  address {
+    font-style: normal;
+  }
+
+  @media screen and (min-width: $desktop-breakpoint) {
+    form {
+      float: right;
+      width: 50%;
+    }
+  }
+}
