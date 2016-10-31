@@ -4,28 +4,44 @@ hero: hero/sunset.jpg
 
 <h2>CONTACT US</h2>
 
-<form enctype="multipart/form-data" action="/contact-us#usermessagea" method="post" class="cform contact " id="cformsform">
-  <ol class="cf-ol">
-    <li><label for="cf_field_1"><span>Your Name</span></label><input type="text" name="cf_field_1" id="cf_field_1" class="single fldrequired" value="Your Name" onfocus="clearField(this)" onblur="setField(this)"><span class="reqtxt">(required)</span></li>
-    <li><label for="cf_field_2"><span>Email</span></label><input type="text" name="cf_field_2" id="cf_field_2" class="single fldemail fldrequired" value=""><span class="emailreqtxt">(valid email required)</span></li>
-    <li><label for="cf_field_3"><span>Subject</span></label><input type="text" name="cf_field_3" id="cf_field_3" class="single" value=""></li>
-    <li><label for="cf_field_4"><span>Message</span></label><textarea cols="30" rows="8" name="cf_field_4" id="cf_field_4" class="area"></textarea></li>
-    <li><label for="cf_field_5"><span>Email me a copy</span></label><input type="checkbox" name="cf_field_5" id="cf_field_5" class="cf-box-b"></li>
-  </ol>
-  <p class="cf-sb"><input type="submit" name="sendbutton" id="sendbutton" class="sendbutton" value="Submit" onclick="return cforms_validate('', false)"></p>
-</form>
+<div class="alignleft">
+  <address>
+    <a href="http://maps.google.ca/maps?q=3721+Drinkwater+Rd%0ADuncan+BC+V9L+6P2" target="_blank">
+      <%= image_tag 'contact_us/gmap.png' %>
+    </a>
+    <p>
+    3721 Drinkwater Rd<br>
+    Duncan BC V9L 6P2<br>
+    <p>
+    Toll Free: 800.748.8177<br>
+    Phone: 250.748.8888<br>
+    Fax: 250.746.8011<br>
+    <p>
+    <%= link_to 'surefloat@surespanstructures.com', 'mailto:surefloat@surespanstructures.com' %>
+  </address>
+</div>
 
-<address>
-  <a href="http://maps.google.ca/maps?q=3721+Drinkwater+Rd%0ADuncan+BC+V9L+6P2" target="_blank">
-    <%= image_tag 'contact_us/gmap.png' %>
-  </a><br>
-  <span style="color: #ffffff;">.</span><br>
-  3721 Drinkwater Rd<br>
-  Duncan BC V9L 6P2<br>
-  <span style="color: #ffffff;">.</span><br>
-  Toll Free: 800.748.8177<br>
-  Phone: 250.748.8888<br>
-  Fax: 250.746.8011<br>
-  <span style="color: #ffffff;">.</span><br>
-  <a href="mailto:surefloat@surespanstructures.com">surefloat@surespanstructures.com</a>
-</address>
+
+<form id="ajax-contact" method="post" action="https://static-files.canaryprint.ca/surefloat.com/mailer.php">
+  <div class="field">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+  </div>
+
+  <div class="field">
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+  </div>
+
+  <div class="field">
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" required></textarea>
+  </div>
+
+  <div class="field">
+    <button type="submit">Send</button>
+  </div>
+</form>
+<div id="form-messages"></div>
+
+<div class="clearfix"></div>
