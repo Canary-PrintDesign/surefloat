@@ -23,6 +23,7 @@
       font-size: 1.2em;
       border-radius: 3px;
       border: 1px solid #D9D9D9;
+      box-sizing: border-box;
     }
 
     textarea {
@@ -32,6 +33,7 @@
       font-size: 1.2em;
       border-radius: 3px;
       border: 1px solid #D9D9D9;
+      box-sizing: border-box;
     }
 
     button {
@@ -67,9 +69,7 @@
       color: #468847;
       background-color: #dff0d8;
       border: 1px solid #d6e9c6;
-      -webkit-border-radius: 4px;
-         -moz-border-radius: 4px;
-              border-radius: 4px;
+      border-radius: 4px;
     }
 
     .error {
@@ -79,17 +79,20 @@
       color: #b94a48;
       background-color: #f2dede;
       border: 1px solid rgba(185, 74, 72, 0.3);
-      -webkit-border-radius: 4px;
-         -moz-border-radius: 4px;
-              border-radius: 4px;
+      border-radius: 4px;
     }
   }
-}
 
+  @media screen and (min-width: $desktop-breakpoint) {
+    form {
+      float: right;
+      width: 50%;
+    }
+  }
 
-@media screen and (min-width: $desktop-breakpoint) {
-  form {
-    float: right;
-    width: 50%;
+  @media screen and (max-width: $desktop-breakpoint - 1px) {
+    form {
+      clear: both;
+    }
   }
 }
