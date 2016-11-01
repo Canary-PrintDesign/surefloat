@@ -21,3 +21,6 @@
 
 # Ignore webpack temporary build location
 .tmp
+
+# Ignore S3 secret codes
+.s3_sync
