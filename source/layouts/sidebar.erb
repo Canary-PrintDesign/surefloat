@@ -1,22 +1,56 @@
-<% wrap_layout :layout do %>
-  <div class="main-content-wrapper">
-    <div class="main-content">
-      <%= yield %>
+<!doctype html>
+<html>
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title><%= current_page.data.title ? "#{current_page.data.title} - Surefloat" : "Surefloat Engineered Concrete Docks &amp; Marinas" %></title>
+
+    <link href='//fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+
+    <%= stylesheet_link_tag 'main.bundle' %>
+  </head>
+
+  <body class="<%= page_classes %>">
+    <%= partial 'page_header' %>
+    <div class="hero">
+      <div class="hero-mask"></div>
+      <%= image_tag current_page.data.hero || 'hero/sunset.jpg' %>
+      <% link_to('/contact-us'){ %> <%= image_tag 'home/quote.png' %> <% } %>
     </div>
 
-    <div class="sidebar">
-      <ul class="list-unstyled">
-        <li>
-          <a href="/products-services/commercial-marinas">
-            <%= image_tag 'home/commercial.jpg', title: 'Commercial Marinas' %>
-          </a>
-        </li>
-        <li>
-          <a href="/products-services/residential-cottage-docks">
-            <%= image_tag 'home/residential.jpg', title: 'Residential Cottage Docks' %>
-          </a>
-        </li>
-      </ul>
-    <div>
-  </div>
-<% end %>
+    <div class="container">
+      <div class="tagline">
+        <span>Residential waterfront home docks, recreational cottage docks, yacht enclosures, private docks, boat launches and marinas</span>
+      </div>
+      <div class="main-content-container">
+        <div class="main-content-wrapper">
+          <div class="main-content">
+            <%= yield %>
+          </div>
+
+          <div class="sidebar">
+            <ul class="list-unstyled">
+              <li>
+                <a href="/products-services/commercial-marinas">
+                  <%= image_tag 'home/commercial.jpg', title: 'Commercial Marinas' %>
+                </a>
+              </li>
+              <li>
+                <a href="/products-services/residential-cottage-docks">
+                  <%= image_tag 'home/residential.jpg', title: 'Residential Cottage Docks' %>
+                </a>
+              </li>
+            </ul>
+          <div>
+        </div>
+      </div>
+    </div>
+
+    <%= partial 'page_footer' %>
+
+    <%= javascript_include_tag 'main.bundle' %>
+  </body>
+</html>

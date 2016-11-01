@@ -9,3 +9,20 @@
     line-height: 40px;
   }
 }
+
+.hero {
+  a {
+    position: absolute;
+    right: 30%;
+    top: 65px;
+    z-index: 1;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .hero {
+    a {
+      right: 10%;
+    }
+  }
+}
